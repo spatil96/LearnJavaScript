@@ -31,26 +31,27 @@ let job2 = "teacher";
 console.log(myFirstJob);
 
 ////////////////////////////////////
+
 // Data Types
 let javascriptIsFun = true;
-console.log(javascriptIsFun);
+console.log(javascriptIsFun); //true
 
-// console.log(typeof true);
-console.log(typeof javascriptIsFun);
+console.log(typeof true); //boolean
+console.log(typeof javascriptIsFun); //boolean
 // console.log(typeof 23);
 // console.log(typeof 'Jonas');
 
-javascriptIsFun = 'YES!';
-console.log(typeof javascriptIsFun);
+javascriptIsFun = 'YES!'; //String
+console.log(typeof javascriptIsFun); //string
 
-let year;
-console.log(year);
-console.log(typeof year);
+let year; //undefined
+console.log(year); //undefined
+console.log(typeof year); //undefined
 
-year = 1991;
-console.log(typeof year);
+year = 1991; //number
+console.log(typeof year); //number
 
-console.log(typeof null);
+console.log(typeof null); //object
 
 ////////////////////////////////////
 // let, const and var
@@ -58,12 +59,16 @@ let age = 30;
 age = 31;
 
 const birthYear = 1991;
-// birthYear = 1990;
-// const job;
+console.log(birthYear);
+// birthYear = 1990;// need to comment for removing error explaination below
+// console.log(birthYear);//does not work
+// console.log(" Trying 2nd time "+birthYear);//Still not working gives error
+
+// const job; //not legal gives error
 
 var job = 'programmer';
 job = 'teacher'
-
+// console.log(job);//teacher
 lastName = 'Schmedtmann';
 console.log(lastName);
 
@@ -71,9 +76,9 @@ console.log(lastName);
 // Basic Operators
 // Math operators
 const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
-console.log(ageJonas, ageSarah);
+const ageJonas = now - 1991;//46
+const ageSarah = now - 2018;//19
+console.log(ageJonas, ageSarah);//46 19
 
 console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
 // 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
@@ -86,18 +91,19 @@ console.log(firstName + ' ' + lastName);
 let x = 10 + 5; // 15
 x += 10; // x = x + 10 = 25
 x *= 4; // x = x * 4 = 100
-x++; // x = x + 1
+++x;//x++(same) // x = x + 1
 x--;
-x--;
+--x;
 console.log(x);
 
-// Comparison operators
-console.log(ageJonas > ageSarah); // >, <, >=, <=
-console.log(ageSarah >= 18);
+// Comparison operators //boolean result
+console.log(ageJonas > ageSarah); // >, <, >=, <=//true
+console.log(ageSarah >= 18);//true
 
 const isFullAge = ageSarah >= 18;
+console.log(isFullAge);//true
 
-console.log(now - 1991 > now - 2018);
+console.log(now - 1991 > now - 2018);//true
 
 ////////////////////////////////////
 // Operator Precedence
@@ -113,7 +119,7 @@ console.log(x, y);
 
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
-*/
+
 
 ////////////////////////////////////
 // Coding Challenge #1
@@ -160,6 +166,8 @@ console.log(jonas);
 
 const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
 console.log(jonasNew);
+const jonasNew1 = `I'm $firstName, a ${year - birthYear} year old ${job}!`;//${} is required
+console.log(jonasNew1);//I'm $firstName, a 46 year old teacher!
 
 console.log(`Just a regular string...`);
 
@@ -192,7 +200,14 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
-*/
+
+let checkUndefined;
+if(checkUndefined == null){
+  console.log(`checkUndefined and 'null' are equal in value`)// this prints
+}
+else{
+  console.log(`check and null are different/not equal in value`)
+}
 
 ////////////////////////////////////
 // Coding Challenge #2
@@ -274,7 +289,7 @@ if (height) {
 } else {
   console.log('Height is UNDEFINED');
 }
-
+*/
 ////////////////////////////////////
 // Equality Operators: == vs. ===
 const age = '18';
@@ -297,7 +312,7 @@ if (favourite === 23) { // 22 === 23 -> FALSE
 }
 
 if (favourite !== 23) console.log('Why not 23?');
-
+/*
 ////////////////////////////////////
 // Logical Operators
 const hasDriversLicense = true; // A
