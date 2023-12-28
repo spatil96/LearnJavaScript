@@ -289,7 +289,7 @@ if (height) {
 } else {
   console.log('Height is UNDEFINED');
 }
-*/
+
 ////////////////////////////////////
 // Equality Operators: == vs. ===
 const age = '18';
@@ -429,17 +429,17 @@ if (day === 'monday') {
 
 ////////////////////////////////////
 // Statements and Expressions
-3 + 4
-1991
-true && false && !false
+3 + 4 //Expression
+1991 // Expression
+true && false && !false // Expression 
 
 if (23 > 10) {
-  const str = '23 is bigger';
+  const str = '23 is bigger'; // Statement, which produce a value
 }
 
 const me = 'Jonas';
 console.log(`I'm ${2037 - 1991} years old ${me}`);
-
+//${} is template literal which expects a expression not a statement
 ////////////////////////////////////
 // The Conditional (Ternary) Operator
 const age = 23;
