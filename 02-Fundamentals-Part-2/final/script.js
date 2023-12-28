@@ -36,6 +36,7 @@ function fruitProcessor(apples, oranges) {
 
 const appleJuice = fruitProcessor(5, 0);
 console.log(appleJuice);
+// console.log(juice) //Reference error
 
 const appleOrangeJuice = fruitProcessor(2, 4);
 console.log(appleOrangeJuice);
@@ -115,7 +116,7 @@ const yearsUntilRetirement = function (birthYeah, firstName) {
 
 console.log(yearsUntilRetirement(1991, 'Jonas'));
 console.log(yearsUntilRetirement(1950, 'Mike'));
-*/
+
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -209,40 +210,42 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
 
-
+*/
 ///////////////////////////////////////
 // Basic Array Operations (Methods)
 const friends = ['Michael', 'Steven', 'Peter'];
 
 // Add elements
 const newLength = friends.push('Jay');
-console.log(friends);
-console.log(newLength);
+console.log(friends); //[ "Michael", "Steven", "Peter", "Jay" ]
+console.log(newLength); //4
 
 friends.unshift('John');
-console.log(friends);
+console.log(friends);// [ "John", "Michael", "Steven", "Peter", "Jay" ]
 
 // Remove elements
-friends.pop(); // Last
-const popped = friends.pop();
-console.log(popped);
-console.log(friends);
+friends.pop(); // Last Jay is removed
+const popped = friends.pop(); //Peter is removed
+console.log(popped); //Peter
+console.log(friends); // [ "John", "Michael", "Steven" ]
 
 friends.shift(); // First
-console.log(friends);
+console.log(friends); // [ "Michael", "Steven" ]
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+console.log(friends.indexOf('Steven')); //1
+console.log(friends.indexOf('Bob')); //-1 as it does not belong to array
 
 friends.push(23);
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
+console.log(friends) //[ "Michael", "Steven", 23 ]
+console.log(friends.includes('Steven')); //true
+console.log(friends.includes('Bob')); //false //Includes uses strict quality
+console.log(friends.includes(23)); //true
+console.log(friends.includes('23')); //false
 
 if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
-*/
+/*
 
 ///////////////////////////////////////
 // Coding Challenge #2
