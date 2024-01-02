@@ -210,7 +210,7 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[years.length - 1])];
 console.log(ages);
 
-*/
+
 ///////////////////////////////////////
 // Basic Array Operations (Methods)
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -245,12 +245,12 @@ console.log(friends.includes('23')); //false
 if (friends.includes('Steven')) {
   console.log('You have a friend called Steven');
 }
-/*
+
 
 ///////////////////////////////////////
 // Coding Challenge #2
 
-/*
+
 Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
 
 1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
@@ -263,10 +263,10 @@ TEST DATA: 125, 555 and 44
 HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 😉
 
 GOOD LUCK 😀
-*/
 
-/*
-const calcTip = function (bill) {
+
+
+const calcTip =  (bill)=> {
   return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 // const calcTip = bill => bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
@@ -388,7 +388,7 @@ Let's go back to Mark and John comparing their BMIs! This time, let's use object
 TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
 
 GOOD LUCK 😀
-*/
+
 
 /*
 const mark = {
@@ -424,6 +424,35 @@ if (mark.bmi > john.bmi) {
   console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`)
 }
 
+/* Write your code below. Good luck! 🙂 */
+/*
+const mark = {
+  fullName : 'Mark Miller',
+  mass : 90,
+  height : 10,
+  calcBMI: function(){
+      this.bmi = this.mass/(this.height*this.height);
+      return this.bmi;
+  }
+};
+const john = {
+  fullName : 'john smith',
+  mass : 60,
+  height : 10,
+  calcBMI: function(){
+      this.bmi = this.mass/(this.height*this.height);
+      return this.bmi;
+  }
+};
+mark.calcBMI();
+john.calcBMI();
+if(mark.bmi>john.bmi){
+console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`)
+}else if(john.bmi>mark.bmi){
+ console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`) 
+}else{
+  console.log(`Both have the same BMI`)
+}
 
 ///////////////////////////////////////
 // Iteration: The for Loop
