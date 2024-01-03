@@ -565,15 +565,15 @@ while (rep <= 10) {
   // console.log(`WHILE: Lifting weights repetition ${rep} 🏋️‍♀️`);
   rep++;
 }
-
+*/
 let dice = Math.trunc(Math.random() * 6) + 1;
 
 while (dice !== 6) {
   console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
+  dice = Math.trunc(Math.random() * 6)+1;
   if (dice === 6) console.log('Loop is about to end...');
 }
-*/
+/*
 
 ///////////////////////////////////////
 // Coding Challenge #4
@@ -623,4 +623,33 @@ const calcAverage = function (arr) {
 console.log(calcAverage([2, 3, 7]));
 console.log(calcAverage(totals));
 console.log(calcAverage(tips));
+
+console.log(`---------------MY Solution --------------`)
+const calcTip1 = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
 */
+/* Write your code below. Good luck! 🙂 */
+/*
+const bills1 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips1 = [];
+const totals1 = [];
+for(let i=0;i<bills1.length;i++){
+    let tip = calcTip(bills1[i]);
+    tips1[i] = tip;
+    totals1[i] = tip+bills1[i];
+}
+console.log(bills1, tips1, totals1);
+const calcAverage1 = function(arr){
+    let sum =0;
+    for(let i=0; i<arr.length;i++){
+        sum+=arr[i];
+    }
+    return sum/arr.length;
+}
+console.log(calcAverage1([2, 3, 7]));
+console.log(calcAverage1(totals1));
+console.log(calcAverage1(tips1));
+
+*/
+
