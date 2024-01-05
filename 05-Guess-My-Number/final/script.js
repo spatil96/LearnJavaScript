@@ -3,7 +3,7 @@
 /*
 console.log(document.querySelector('.message').textContent);
 document.querySelector('.message').textContent = '🎉 Correct Number!';
-
+//we can select class name from the html file where this script is imported
 document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 10;
 
