@@ -47,7 +47,16 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
-
+// Destructuring
+let [main, , secoundary] = restaurant.categories;
+console.log(main, secoundary); //here we skip the middle
+[main, secoundary] = [secoundary, main]; // here we can swap without third variable
+console.log(main, secoundary);
+const nested = [2, 3, 5, [6, 7]];
+const [i, , , [, k]] = nested; //printing only 2,7
+console.log(i, k); //prints 2 7
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r);
 ///////////////////////////////////////
 // String Methods Practice
 
