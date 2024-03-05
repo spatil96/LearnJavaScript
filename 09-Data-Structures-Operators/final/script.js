@@ -57,6 +57,12 @@ const [i, , , [, k]] = nested; //printing only 2,7
 console.log(i, k); //prints 2 7
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r);
+
+//SpreadOperator ->useFul to create shallow copy, join two array
+const arr = [1, 2, 3];
+const newArr = [...arr, 4, 5];
+console.log(newArr); //[1,2,3,4,5]
+
 ///////////////////////////////////////
 // String Methods Practice
 
